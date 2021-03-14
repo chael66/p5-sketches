@@ -21,30 +21,45 @@ function setup(){
     textSize(fSize);
    
     jArray = font.textToPoints("J",width/2,height/2,fSize,{
-        sampleFactor :0.15
+        sampleFactor :0.02
     })
     
     stroke(0)
-    strokeWeight(2)
+    strokeWeight(3)
     noFill();
     
    
 
 
     
-    fill(0)
+   
 }
 
 function draw(){
+    fill(18,100)
     text("",width/2,height/2);
     for(let i=0; i<jArray.length;i++){
-        push();
-        // ellipse(jArray[i].x,jArray[i].y,10,10);
+        
+        rect(jArray[i].x,jArray[i].y,20,20);
+        
         // translate(jArray[i].x,jArray[i].y);
-        line(jArray[i].x,jArray[i].y,100,600)
-       
+  
     }
+fill(10,1)
+noStroke()
+    for(let i=0; i<jArray.length;i++){
+        
+        rect(jArray[i].x-5,jArray[i].y-5,20,20);
+        rect(jArray[i].x-10,jArray[i].y-10,20,20);
+        rect(jArray[i].x-15,jArray[i].y-15,20,20);
 
+        rect(jArray[i].x-20,jArray[i].y-20,20,20);
+        rect(jArray[i].x-25,jArray[i].y-25,20,20);
+        rect(jArray[i].x-30,jArray[i].y-30,20,20);
+        rect(jArray[i].x-35,jArray[i].y-35,20,20);
+                // translate(jArray[i].x,jArray[i].y);
+  
+    }
 
 }
 
