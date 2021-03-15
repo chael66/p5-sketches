@@ -3,6 +3,7 @@ let fSize=600 // font size
 let msg // text to write
 let pts = [] // store path data
 let jArray;
+let r=0;
 
 function preload() {
 // setup()과 draw()를 호출하기에 앞서,
@@ -21,12 +22,11 @@ function setup(){
     textSize(fSize);
    
     jArray = font.textToPoints("J",width/2,height/2,fSize,{
-        sampleFactor :0.02
+        sampleFactor :0.2
     })
     
-    stroke(0)
-    strokeWeight(3)
-    noFill();
+    
+   
     
    
 
@@ -36,30 +36,23 @@ function setup(){
 }
 
 function draw(){
-    fill(18,100)
+   noFill()
+   stroke(0,20)
+    strokeWeight(0.2)
     text("",width/2,height/2);
     for(let i=0; i<jArray.length;i++){
         
-        rect(jArray[i].x,jArray[i].y,20,20);
+        push();
         
-        // translate(jArray[i].x,jArray[i].y);
-  
+        translate(jArray[i].x-100,jArray[i].y+100);
+        // rotate(r);
+        // r++;
+       
+        rect(0, 0, 150, 100, 100);
+        pop();
+     
     }
-fill(10,1)
-noStroke()
-    for(let i=0; i<jArray.length;i++){
-        
-        rect(jArray[i].x-5,jArray[i].y-5,20,20);
-        rect(jArray[i].x-10,jArray[i].y-10,20,20);
-        rect(jArray[i].x-15,jArray[i].y-15,20,20);
 
-        rect(jArray[i].x-10,jArray[i].y-10,20,20);
-        rect(jArray[i].x-10,jArray[i].y-10,20,20);
-        rect(jArray[i].x-10,jArray[i].y-10,20,20);
-        rect(jArray[i].x-10,jArray[i].y-10,20,20);
-                // translate(jArray[i].x,jArray[i].y);
-  
-    }
 
 }
 
