@@ -28,6 +28,7 @@ function setup(){
     jArray = font.textToPoints("J",width/2,height/2,fSize,{
         sampleFactor :20
         // print();
+        
     })
     
     
@@ -84,7 +85,7 @@ function mousePressed(){
 
 
 
-console.log("3/21")
+console.log("3/22")
 
 
 
