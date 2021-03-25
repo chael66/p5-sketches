@@ -19,7 +19,8 @@ font = loadFont('../coolvetica rg.ttf');
 function setup(){
     var c=createCanvas(1000,1000);
     background(255);
-   
+    frameRate(30)
+      createLoop({duration:3, gif:true})
 
     textFont(font);
     textSize(fSize);
@@ -28,6 +29,8 @@ function setup(){
     jArray = font.textToPoints("J",width/2,height/2,fSize,{
         sampleFactor :20
         // print();
+
+
         
     })
     
@@ -85,7 +88,7 @@ function mousePressed(){
 
 
 
-console.log("3/22")
+console.log("3/24")
 
 
 

@@ -8,6 +8,8 @@ let bounds;
 function setup() {
   createCanvas(1000, 1000);
   noStroke(0);
+  frameRate(15)
+  createLoop({duration:4, gif:true})
 
   points = font.textToPoints('J', 2, -0.5, 10, {
     sampleFactor: 100,

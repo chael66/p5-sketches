@@ -9,8 +9,8 @@ function preload (){
 function setup() {
     noStroke() 
    var canvas= createCanvas(1000, 1000);
-
- 
+    frameRate(30)
+   createLoop({duration:3, gif:true})
     // image(J3,0,0)
  
 
